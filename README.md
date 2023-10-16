@@ -5,5 +5,5 @@ TODO:
 - [ ] Export pretty text from debate data
 - [ ] Max words as a variable
 - [ ] N participant with random discuissions
-- [ ] Export `requirements.txt``
+- [ ] Export `requirements.txt`
 - [ ] Update README
