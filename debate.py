@@ -17,7 +17,7 @@ class Debate:
 
         with open("debate_context.txt", "r") as f:
             debate_context = f.read()
-        self.debate_context = debate_context.replace('[NB_WORDS]', nb_words)
+        self.debate_context = debate_context.replace("[NB_WORDS]", nb_words)
         self.debate_context += "\nThe subject of the debate is: " + subject
 
     def export_debate_data(self):
@@ -30,7 +30,7 @@ class Debate:
         }
 
         for agent in self.agents:
-            debate_data[agent.name] = {"opinion": agent.opinion, 'tone': agent.tone}
+            debate_data[agent.name] = {"opinion": agent.opinion, "tone": agent.tone}
 
         with open(f"output/{self.datetime}.json", "w") as f:
             json.dump(debate_data, f)
@@ -48,7 +48,7 @@ class Debate:
                 debate_summary += f"> {agent_name}: {message[agent_name]}\n"
         debate_summary += "\n### End ###"
 
-        with open(f"output/{self.datetime}.txt", "w", encoding='UTF-8') as f:
+        with open(f"output/{self.datetime}.txt", "w", encoding="UTF-8") as f:
             f.write(debate_summary)
 
 
@@ -88,7 +88,11 @@ if __name__ == "__main__":
         agent_name = input(f"> Agent {i+1} name: ")
         agent_opinion = input(f"> {agent_name} opinion: ")
         agent_tone = input(f"> {agent_name} tone: ")
-        debate.agents.append(DebateAgent(agent_name, subject, agent_opinion, agent_tone, debate.debate_context))
+        debate.agents.append(
+            DebateAgent(
+                agent_name, subject, agent_opinion, agent_tone, debate.debate_context
+            )
+        )
         print(f"\t> {agent_name} created!\n")
 
     # Debate
