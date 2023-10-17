@@ -17,8 +17,8 @@ class Debate:
 
         with open("debate_context.txt", "r") as f:
             debate_context = f.read()
-        debate_context = debate_context.replace('[NB_WORDS]', nb_words)
-        self.debate_context = debate_context + subject
+        self.debate_context = debate_context.replace('[NB_WORDS]', nb_words)
+        self.debate_context += "\nThe subject of the debate is: " + subject
 
     def export_debate_data(self):
         debate_data = {
