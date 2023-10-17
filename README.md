@@ -19,7 +19,7 @@ For each agent:
 - `Opinion`: The opinion the agent should defend.
 - `Tone`: The tone the agent should use during the debate.
 
-## Results
+## Results 🗃️
 A `json` and a `txt` files will be created, with the debate parameters and the resulting discussion. Result files will be exported in the `output/` folder, named with datetime of when the discusion was created.
 
 ## Examples 🗣️
